@@ -1,12 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import {Provider} from 'react-redux'
+import {createStore} from 'redux'
+import Game from './container/Game'
+import reducer from './reducers'
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// ここでstoreを作っている. storeという変数に代入　//
+const store = createStore(
+    reducer, // initialStateが入っている //
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),// redux使うためのツール//
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
+
+ReactDOM.render(
+    <Provider store={store}>
+        <Game />
+    </Provider>,
+    document.getElementById('root')
+);
+
 serviceWorker.unregister();
