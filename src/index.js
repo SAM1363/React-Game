@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import {Provider} from 'react-redux'
 import {createStore} from 'redux'
-import Game from './container/Game'
+import Game from './containers/Game'
 import reducer from './reducers'
 import * as serviceWorker from './serviceWorker';
 
@@ -22,3 +22,4 @@ ReactDOM.render(
 );
 
 serviceWorker.unregister();
+

@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Canvas from './components/Canvas'
+import {CanvasPosition} from './utils/formuals';
+import Canvas from './components/Canvas';
 
 class App extends Component {
+  componentDidMount(){
+    const self = this;
+    setInterval(() =>{
+      self.props.moveObjects(self.canvasMousePosition);
+    }, 10);
+  }
+
+  trackMouse(event){
+    this.canvasMousePosition = CanvasPosition(event);
+  }
   render() {
     return (
-      <div>
-        <h1>{this.props.message}</h1>
-        <Canvas />
-      </div>
+        <Canvas 
+          angle={this.props.angle}
+          trackMouse={event => (this.trackMouse(event))}
+        />
     );
   }
 }
 
 App.propTypes = {
-  message: PropTypes.string.isRequired,
+  angle: PropTypes.number.isRequired,
+  moveObjects: PropTypes.func.isRequired,
 };
 
 export default App;
