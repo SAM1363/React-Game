@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { pathFromBezierCurve } from '../utils/formuals';
+import { pathFromBezierCurve } from '../utils/formulas';
 
 const CannonPipe = (props) => {
   const cannonPipeStyle = {
@@ -54,5 +54,6 @@ const CannonPipe = (props) => {
 CannonPipe.propTypes = {
   rotation: PropTypes.number.isRequired,
 };
+
 
 export default CannonPipe;

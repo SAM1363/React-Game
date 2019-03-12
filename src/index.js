@@ -1,25 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import './index.css';
-import {Provider} from 'react-redux'
-import {createStore} from 'redux'
-import Game from './containers/Game'
-import reducer from './reducers'
-import * as serviceWorker from './serviceWorker';
+import Game from './containers/Game';
+import reducer from './reducers';
+import registerServiceWorker from './registerServiceWorker';
 
-// ここでstoreを作っている. storeという変数に代入　//
 const store = createStore(
-    reducer, // initialStateが入っている //
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),// redux使うためのツール//
+  reducer, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 );
-
 
 ReactDOM.render(
-    <Provider store={store}>
-        <Game />
-    </Provider>,
-    document.getElementById('root')
+  <Provider store={store}>
+    <Game />
+  </Provider>,
+  document.getElementById('root'),
 );
-
-serviceWorker.unregister();
-
+registerServiceWorker();
