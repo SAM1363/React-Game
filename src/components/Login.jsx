@@ -21,7 +21,7 @@ const Login = (props) => {
     style: {
       fontFamily: '"Joti One", cursive',
       fontSize: 45,
-      fill: '#e3e3e3',
+      fill: '#cbca62',
       cursor: 'pointer',
     },
     onClick: props.authenticate,

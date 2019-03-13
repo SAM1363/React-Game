@@ -13,8 +13,7 @@ Auth0.configure({
   redirectUri: 'http://localhost:3000/',
   responseType: 'token id_token',
   scope: 'openid profile manage:points',
-  audience: 'https://react-game.com',
-
+  // audience: 'https://react-game.com',
 });
 
 class App extends Component {

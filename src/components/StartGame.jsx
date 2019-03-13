@@ -7,9 +7,9 @@ const StartGame = (props) => {
     x: gameWidth / -2, 
     y: -280, 
     width: gameWidth,
-    height: 200,
-    rx: 10, 
-    ry: 10, 
+    height: 130,
+    rx: 50, 
+    ry: 50, 
     style: {
       fill: 'transparent',
       cursor: 'pointer',
@@ -20,11 +20,11 @@ const StartGame = (props) => {
   const text = {
     textAnchor: 'middle', 
     x: 0, 
-    y: -150, 
+    y: -180, 
     style: {
       fontFamily: '"Joti One", cursive',
       fontSize: 60,
-      fill: '#e3e3e3',
+      fill: '#FF530D',
       cursor: 'pointer',
     },
     onClick: props.onClick,

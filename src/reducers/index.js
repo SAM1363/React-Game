@@ -10,7 +10,8 @@ import shoot from './shoot';
 const initialGameState = {
   started: false,
   kills: 0,
-  lives: 3,
+  lives: 4
+  ,
   flyingObjects: [],
   cannonBalls: [],
   lastObjectCreatedAt: new Date(),

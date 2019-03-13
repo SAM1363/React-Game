@@ -1,15 +1,16 @@
 import React from 'react';
 import { skyAndGroundWidth } from '../utils/constants';
+// import img from '../img/maroon.jpg';
 
 const Sky = () => {
-  const skyStyle = {
-    fill: '#30abef',
-    
-  };
   const gameHeight = 1200;
+
+  // const image = {
+  //   backgroundImage: `url(${img})`
+  // }
+
   return (
     <rect
-      style={skyStyle}
       x={skyAndGroundWidth / -2}
       y={100 - gameHeight}
       width={skyAndGroundWidth}

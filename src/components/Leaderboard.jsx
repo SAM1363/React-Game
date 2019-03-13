@@ -6,8 +6,8 @@ import Rank from "./Rank";
 const Leaderboard = (props) => {
   const style = {
     fill: 'transparent',
-    stroke: 'black',
-    strokeDasharray: '15',
+    stroke: 'white',
+    strokeDasharray: '25',
   };
 
   const leaderboardTitle = {
