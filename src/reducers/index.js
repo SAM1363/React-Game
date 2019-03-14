@@ -10,7 +10,7 @@ import shoot from './shoot';
 const initialGameState = {
   started: false,
   kills: 0,
-  lives: 4
+  lives: 3
   ,
   flyingObjects: [],
   cannonBalls: [],

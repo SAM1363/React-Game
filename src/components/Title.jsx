@@ -7,31 +7,17 @@ const Title = () => {
     fontSize: 120,
     fill: '#cbca62',
   };
-
-  const aliensLineCurve = {
-    initialAxis: {
-      x: -190,
-      y: -950,
-    },
-    initialControlPoint: {
-      x: 95,
-      y: -50,
-    },
-    endingControlPoint: {
-      x: 285,
-      y: -50,
-    },
-    endingAxis: {
-      x: 380,
-      y: 0,
-    },
+  const theStyle = {
+    fontFamily: '"Joti One", cursive',
+    fontSize: 70,
+    fill: '#cbca62',
   };
 
-  const goHomeLineCurve = {
-    ...aliensLineCurve,
+
+  const firstPath = {
     initialAxis: {
-      x: -250,
-      y: -780,
+      x: -170,
+      y: -950,
     },
     initialControlPoint: {
       x: 125,
@@ -43,7 +29,46 @@ const Title = () => {
     },
     endingAxis: {
       x: 500,
+      y: 180,
+    },
+  };
+
+  const secondPath = {
+    ...firstPath,
+    initialAxis: {
+      x: -50,
+      y: -915,
+    },
+    initialControlPoint: {
+      x: 380,
       y: 0,
+    },
+    endingControlPoint: {
+      x: 0,
+      y: 0,
+    },
+    endingAxis: {
+      x: 0,
+      y: 0,
+    },
+  };
+  const lastPath = {
+    ...firstPath,
+    initialAxis: {
+      x: -150,
+      y: -740,
+    },
+    initialControlPoint: {
+      x: 125,
+      y: -90,
+    },
+    endingControlPoint: {
+      x: 375,
+      y: -90,
+    },
+    endingAxis: {
+      x: 500,
+      y: 180,
     },
   };
 
@@ -52,21 +77,32 @@ const Title = () => {
       <defs>
         <path
           id="AliensPath"
-          d={pathFromBezierCurve(aliensLineCurve)}
+          d={pathFromBezierCurve(firstPath)}
         />
         <path
-          id="GoHomePath"
-          d={pathFromBezierCurve(goHomeLineCurve)}
+          id="thePath"
+          d={pathFromBezierCurve(secondPath)}
         />
+        <path
+          id="lastPath"
+          d={pathFromBezierCurve(lastPath)}
+        >
+
+        </path>
       </defs>
       <text {...textStyle}>
         <textPath xlinkHref="#AliensPath">
-          Aliens
+          Defeat
+        </textPath>
+      </text>
+      <text {...theStyle}>
+        <textPath xlinkHref="#thePath">
+          The
         </textPath>
       </text>
       <text {...textStyle}>
-        <textPath xlinkHref="#GoHomePath">
-          {/* Go Home! */}
+        <textPath xlinkHref="#lastPath">
+          Aliens
         </textPath>
       </text>
     </g>

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Sky from './Sky';
+// import Sky from './Sky';
 import Ground from './Ground';
 import CannonBase from './CannonBase';
 import CannonPipe from './CannonPipe';
@@ -42,7 +42,7 @@ const Canvas = (props) => {
           <feDropShadow dx="1" dy="1" stdDeviation="2" />
         </filter>
       </defs>
-      <Sky />
+      {/* <Sky /> */}
       <Ground />
         {props.gameState.cannonBalls.map(cannonBall => (
           <CannonBall
