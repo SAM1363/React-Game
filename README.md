@@ -1,15 +1,17 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## React-Shooting-Game[Defeat The Aliens!]
 
-In the project directory, you can run:
+Develop a game with React, Redux, SVG, AuthO, and Socket.io
 
-### `npm start`
+### `npm start` and `node ./server/index &`
 
+`npm start`
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
+` node ./server/index & `
+Runs the server side<br>
 You will also see any lint errors in the console.
 
 ### `npm test`
