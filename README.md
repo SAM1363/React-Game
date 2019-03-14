@@ -4,4 +4,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Develop a game with React, Redux, SVG, AuthO, and Socket.io
 
-Screen Shot 2019-03-14 at 10.10.58 AM.png
+<img scr= />
