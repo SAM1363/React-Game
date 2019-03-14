@@ -3,8 +3,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## React-Shooting-Game[Defeat The Aliens!]
 Developed a game with React, Redux, SVG, AuthO, and Socket.io
 <hr/>
-<h2>Project Description</h2>
 
+<h2>Project Description</h2><hr/>
 You will have a cannon and will have to destroy flying discs that are trying to invade the earth. To destroy these flying discs you will have to point and click on an SVG canvas to make your cannon shoot. If the discs pass you, you loose 1 heart. You have 3 heart. Git your high score!
 
 ## Demo
